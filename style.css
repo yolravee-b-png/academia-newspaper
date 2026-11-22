@@ -1,0 +1,164 @@
+
+/* ตั้งค่าพื้นฐาน */
+body {
+    margin: 0;
+    padding: 25px;
+    background-color: #dce4e9;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #303b43;
+}
+
+/* พื้นที่หนังสือพิมพ์ */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px;
+    background-color: #f8fafb;
+    box-sizing: border-box;
+}
+
+/* ชื่อหนังสือพิมพ์ */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #526b7a;
+    margin-bottom: 10px;
+}
+
+/* คำโปรย */
+.subtitle {
+    text-align: center;
+    color: #71818b;
+    margin-bottom: 25px;
+}
+
+/* เส้นคั่น */
+hr {
+    border: none;
+    border-top: 1px solid #aab8c1;
+    margin: 20px 0;
+}
+
+/* แถวข่าว */
+.news-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: center;
+    margin: 25px 0;
+}
+
+/* สลับตำแหน่งรูปและข้อความ */
+.news-row.reverse {
+    direction: rtl;
+}
+
+.news-row.reverse > * {
+    direction: ltr;
+}
+
+/* รูปภาพ */
+.news-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* เนื้อหาข่าว */
+.news-text h2 {
+    color: #526b7a;
+    font-size: 23px;
+}
+
+.news-text p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* ข่าวที่เต็มความกว้าง */
+.wide-news {
+    margin: 30px 0;
+    padding: 15px 0;
+    border-top: 1px solid #aab8c1;
+    border-bottom: 1px solid #aab8c1;
+    text-align: center;
+}
+
+/* ข่าว 2 คอลัมน์ด้านล่าง */
+.bottom-news {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+/* แต่ละข่าว */
+.news-card {
+    min-width: 0;
+}
+
+/* รูปภาพข่าว */
+.news-card .news-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* ปรับหัวข้อข่าว */
+.news-card .news-text h2 {
+    font-size: 20px;
+}
+
+/* ลิงก์ YouTube */
+.youtube-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #3225c0;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.youtube-link:hover {
+    text-decoration: underline;
+}
+
+/* ส่วนท้ายหนังสือพิมพ์ */
+.newspaper-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* วันที่ */
+.date {
+    text-align: center;
+    color: #71818b;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+/* ปรับหน้าจอมือถือ */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .news-row {
+        grid-template-columns: 1fr;
+    }
+
+    .news-row.reverse {
+        direction: ltr;
+    }
+
+    .bottom-news {
+        grid-template-columns: 1fr;
+    }
+}
